@@ -6,7 +6,7 @@ from InquirerPy import inquirer
 from InquirerPy.utils import patched_print
 from InquirerPy.base.control import Choice
 from InquirerPy.separator import Separator
-from InquirerPy.validators import EmptyInputValidator, NumberValidator, PathValidator
+from InquirerPy.validator import EmptyInputValidator, NumberValidator, PathValidator
 
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
@@ -47,7 +47,7 @@ def new_config():
     config_dict['token'] = token_input
     
     perm_int = inquirer.number(
-        message="Enter the permissions integer your bot requires >>> "
+        message="Enter the permissions integer your bot requires >>> ",
         min_allowed=0,
         max_allowed=10,
         validate=EmptyInputValidator(),

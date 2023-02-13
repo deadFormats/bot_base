@@ -277,7 +277,7 @@ async def load_cogs() -> None:
     """
     for file in os.listdir(os.path.join(os.path.realpath(os.path.dirname(__file__)), "cogs")):
         if file.endswith('.py'):
-            extension = fild[:-3]
+            extension = file[:-3]
             try:
                 await bot.load_extension(f"cogs.{extension}")
                 bot.logger.info(f"Loaded extension '{extension}'")
