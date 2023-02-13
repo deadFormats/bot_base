@@ -8,6 +8,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+discord = "^2.1.0"
+sqlalchemy = "^2.0.3"
+aiosqlite = "^0.18.0"
+inquirerpy = "^0.3.4"
 
 [tool.poetry.dev-dependencies]
 
