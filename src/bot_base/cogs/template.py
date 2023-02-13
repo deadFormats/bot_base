@@ -19,7 +19,7 @@ class Template(commands.Cog, name="template"):
         
         :param context: The command context.
         """
-        context.send("The command actually worked!")
+        await context.send("The command actually worked!")
         
         
 async def setup(bot):

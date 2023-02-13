@@ -14,7 +14,7 @@ Base.metadata.bind = engine
 AioSession.configure(bind=engine)
 
 
-class BlackList(Base):
+class Blacklist(Base):
     __tablename__ = "blacklist"
     user_id = Column(BigInteger, primary_key=True, autoincrement=False)
     created_at = Column(DateTime, default=datetime.utcnow)
