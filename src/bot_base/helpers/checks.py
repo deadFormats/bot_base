@@ -14,7 +14,7 @@ T = TypeVar("T")
 def is_owner() -> Callable[[T], T]:
     async def predicate(context: commands.Context) -> bool:
         config = context.bot.config
-        if context.author.id not in config['owners']:
+        if str(context.author.id) not in config['owners']:
             raise UserNotOwner
             
         return True
@@ -30,3 +30,5 @@ def not_blacklisted() -> Callable[[T], T]:
         return True
     
     return commands.check(predicate)
+
+

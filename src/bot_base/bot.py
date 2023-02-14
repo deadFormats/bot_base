@@ -21,7 +21,7 @@ from bot_base.database.models import create_tables
 
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
-COLORS = {
+EMB_COLORS = {
     'red': 0xE02B2B,
 }
 
@@ -50,7 +50,9 @@ if not os.path.isfile(os.path.join(BASEDIR, 'config.json')):
             with open(file_path, 'r') as file:
                 config = json.load(file)
                 
-
+else:
+    with open(os.path.join(BASEDIR, 'config.json'), 'r') as file:
+        config = json.load(file)
 
 intents = discord.Intents.default()
 intents.members = True
